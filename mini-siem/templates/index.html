@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Mini SIEM</title>
+  <style>
+    body { font-family: Arial, sans-serif; max-width: 860px; margin: 2rem auto; padding: 0 1rem; }
+    textarea { width: 100%; font-family: monospace; }
+    table { border-collapse: collapse; margin-bottom: 1rem; }
+    th, td { border: 1px solid #ccc; padding: 4px 10px; text-align: left; }
+    .alert { background: #fde8e8; border: 1px solid #e11d48; padding: 6px 10px; margin: 4px 0; }
+    .cols { display: flex; gap: 2rem; flex-wrap: wrap; }
+  </style>
+</head>
+<body>
+  <h1>Mini SIEM</h1>
+
+  <!-- [log-form] Ludwig -->
+  <form method="post">
+    <label for="logs">Paste log lines (one per line):</label>
+    <textarea id="logs" name="logs" rows="8"
+      placeholder="2026-11-09 10:15:02 192.0.2.10 FAILED_LOGIN admin"></textarea>
+    <button type="submit">Analyze</button>
+  </form>
+  {% if message %}<p>{{ message }}</p>{% endif %}
+
+  <!-- [alerts] Ramon -->
+  {% for a in alerts %}<div class="alert">&#9888; {{ a }}</div>{% endfor %}
+
+  <div class="cols">
+    <!-- [count-events] Ramon -->
+    <div>
+      <h2>Events ({{ total }} total)</h2>
+      <table>
+        <tr><th>Event</th><th>Count</th></tr>
+        {% for event, n in counts.items() %}<tr><td>{{ event }}</td><td>{{ n }}</td></tr>{% endfor %}
+      </table>
+    </div>
+    <!-- [top-ips] Ludwig -->
+    <div>
+      <h2>Top source IPs</h2>
+      <table>
+        <tr><th>IP</th><th>Events</th></tr>
+        {% for ip, n in top %}<tr><td>{{ ip }}</td><td>{{ n }}</td></tr>{% endfor %}
+      </table>
+    </div>
+  </div>
+</body>
+</html>
