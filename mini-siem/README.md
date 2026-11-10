@@ -26,9 +26,9 @@ More: [docs/how-to-run.md](docs/how-to-run.md)
 
 | Name | GitHub username | Parts |
 |---|---|---|
-| Ludwig | @ludwig-username | Log form, top IPs, README and CHANGELOG |
-| TC | @tc-username | Parser, storage, review guide |
-| Ramon | @ramon-username | Sample logs, event counts, alerts, glossary |
+| Ludwig | @Lurex225 | Log form, top IPs, README and CHANGELOG |
+| TC | @tadiwachihota877-byte | Parser, storage, review guide |
+| Ramon | @rafervi | Sample logs, event counts, alerts, glossary |
 
 ## How we work
 
