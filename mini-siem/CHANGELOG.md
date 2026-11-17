@@ -3,5 +3,5 @@
 One line per merged pull request.
 
 - Add team table and README structure (#PR)
-Adding addition
-test_detect.py Medium and HIGH
+
+- Add MEDIUM and HIGH severity levels to failed-login alerts (#PR)
