@@ -1,4 +1,5 @@
 # Glossary (DRAFT for Ramon to rewrite in his own words)
+- Rewrite glossary and explain MEDIUM and HIGH severity (#PR)
 
 > At least 8 terms, 1-2 sentences each, understandable for a classmate from another field.
 
