@@ -16,10 +16,10 @@ def top_ips(entries, n=5):
 
 # --- Ramon: feature/alerts ---
 def find_alerts(entries, threshold=3):
-    """One message per IP with at least `threshold` FAILED_LOGIN events."""
     failed = Counter(e["ip"] for e in entries if e["event"] == "FAILED_LOGIN")
-    return [
-        f"HIGH: {ip} had {count} failed logins"
-        for ip, count in failed.most_common()
-        if count >= threshold
-    ]
+    alerts = []
+    for ip, count in failed.most_common():
+        if count >= threshold:
+            level = "HIGH" if count >= 5 else "MEDIUM"
+            alerts.append(f"{level}: {ip} had {count} failed logins")
+    return alerts
