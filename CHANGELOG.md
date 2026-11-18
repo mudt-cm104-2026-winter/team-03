@@ -9,3 +9,4 @@ Example:
 ## Unreleased
 
 - Start from the repository template
+- Add Sources and Use of AI sections to the root README
