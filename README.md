@@ -28,7 +28,9 @@ The entries are kept in memory: after a restart the list is empty again.
 No real names: this repository is public. -->
 
 | GitHub | Role |
-|---|---|
+|@Lurex225|Log form, top IPs, README and CHANGELOG|
+|@tadiwachihota877-byte|Parser, storage, review guide|
+|@rafervi|Sample logs, event counts, alerts, glossary|
 
 ## How we work
 
